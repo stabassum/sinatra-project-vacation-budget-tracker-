@@ -8,7 +8,7 @@ The Vacation Budget Tracker currently offers basic features but looks forward to
 
 Users are allowed to view all vacations created by other users as the application shows public information for users to plan vacations and budget. The feature is available once a user is logged in. A user is also allowed to unter the id number of a particular vacation to view that vacation details. Users are allowed to edit and delete a vacation created by themselves, and not of other users. Currently, a user cannot view all of the vacations created only by themselves in a single page rather can view all of the vacations created by all of the users in a single page. The feauture will be implemented in a future editions of the application.
 
-## Application Install Instructions
+## Application Installation Instructions
 
 Users are to make sure that Ruby is installed on their local machines. The application is an open source project. Users can search the username "stabassum" on github and look for the project "sinatra-project-vacation-budget-tracker-" and clone the project to their local machine or desktop. Users are then encouraged to open up terminal and go to the project location where the project is saved. Once users are in the correct directory of the project, they are asked to run "bundle install" to install all ruby gems required for the project. Once bundle install is run and all necessary gems are installed, users are asked to run "shotgun" and copy and paste the following url shown on their terminal screen to their browser "http://127.0.0.1:9393/". Once the url is pasted to the browser, users will be guided to the application and from there, they can choose which feature they want to start using. 
 
