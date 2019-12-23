@@ -1,0 +1,25 @@
+<strong><u>Vacation Details:</u></strong> 
+
+<%= @vacation.description %>
+<br>
+<strong><u>Departure:</u></strong> 
+
+<%= @vacation.departure %>
+<br>
+<strong><u>Destination:</u></strong> 
+
+<%= @vacation.destination %>
+<br>
+<strong><u>Budget:</u></strong> 
+
+$<%= @vacation.budget %>
+<br>
+<strong><u>Spending:</u></strong> 
+
+$<%= @vacation.spending %>
+<br>
+<br>
+<form method="POST" action="/vacations/<%=@vacation.id%>">
+  <input id="hidden" type="hidden" name="_method" value="DELETE" />
+  <input type="submit" value="delete" />
+</form> 

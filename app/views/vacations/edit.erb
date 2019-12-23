@@ -1,0 +1,52 @@
+<style>
+    form {
+        text-align: center;
+    }
+</style>
+    
+
+<form action="/vacations/<%=@vacation.id%>" method="POST"> 
+    
+    <h3>Edit Vacation: </h3> 
+
+    <input id="hidden" type="hidden" name="_method" value="patch"/>
+   
+    <label>Current Description:</label> <%=@vacation.description%>
+    <br><br>
+    <label>New Description:</label>
+    <input type="text" name="description"/>
+    <br><br>
+    
+    <label>Current Date:</label> <%=@vacation.date%>
+    <br><br>
+    <label>New Date:</label>
+    <input type="date" name="date"/>
+    <br><br>
+    
+
+    <label>Current Departure:</label> <%=@vacation.departure%>
+    <br><br>
+    <label>New Departure:</label>
+    <input type="text" name="departure"/>
+    <br><br>
+
+    <label>Current Destination:</label> <%=@vacation.destination%>
+    <br><br>
+    <label>New Destination:</label>
+    <input type="text" name="destination"/>
+    <br><br>
+
+    <label>Current Budget: $</label> <%=@vacation.budget%>
+    <br><br>
+    <label>New Budget:</label>
+    $<input type="text" name="budget"/>
+    <br><br>
+
+    <label>Current Spending: $</label> <%=@vacation.spending%>
+    <br><br>
+    <label>New Spending:</label>
+    $<input type="text" name="spending"/>    
+    <br><br>
+    <input type="submit"/>
+
+</form> 
