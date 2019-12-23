@@ -1,0 +1,49 @@
+<% if Helpers.is_logged_in?(session) %>
+
+
+<div style="text-align:center">  
+<form action='/vacations' method="post">
+  Create Your Vacation!
+  <br>
+  <br>
+
+    Vacation Description:
+    <input type="text" name="description" ><br>
+    <br>
+    
+    Vacation Date :
+
+    <input type="date" name="date" ><br>
+    <br>
+
+    Departure Location:
+    <input type="text" name="departure" ><br>
+   <br>
+
+    Destination Location:
+    <input type="text" name="destination" ><br>
+    <br>
+
+    Budget $:
+    <input type="text" name="budget" ><br>
+    <br>
+
+    Spending $:
+    <input type="text" name="spending" ><br>
+    <br>
+
+    <input type="submit" name="submit" id="submit">
+
+  </form>
+ </div>
+
+  <% else %>
+      <h3 style="text-align:center"> You must be logged in to add your vacations! </h3>
+      
+      <div style="text-align:center">
+        <form action="/login" method="GET">
+          <input type="submit" value="login" />
+        </form>
+      </div>
+  <% end %>
+ 

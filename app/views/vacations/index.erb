@@ -1,0 +1,51 @@
+<style>
+  table, th, td {
+    border: 1px solid black;
+    content-align: center;
+  }
+</style>
+
+  <h2 style="text-align: center">The vacation information below is public</h3>
+  
+  <br>
+
+  <form style="text-align:center" action="/vacations/new" method="GET">
+    <input type="submit" value="Add New Vacation"/>
+  </form>
+  <br>
+  <table align="center">
+    <tr>
+      <th>Description</th>
+      <th>Date</th>
+      <th>Departure Location</th>
+      <th>Destination</th>
+      <th>Budget</th>
+      <th>Spending</th>
+      <th>Spending Status</th>
+      <th>Amount Remaining</th>
+    </tr>
+    
+    <% @vacations.each do |t| %>
+      <tr>  
+        <td>  <%= t.description %> </td>
+        <td>  <%= t.date %> </td>
+        <td>  <%= t.departure %> </td>
+        <td>  <%= t.destination %> </td>
+        <td>  $<%= t.budget %> </td>
+        <td>  $<%= t.spending %> </td>
+        <td>
+              <% if t.budget > t.spending%>
+                Saved
+              <% elsif t.budget == t.spending %>
+                Budget Met  
+              <% else %>
+                Deficit 
+              <% end %>
+        </td>
+        <td>
+          <% @left_over_spending = t.budget - t.spending%>
+          $<%= @left_over_spending %>
+        </td>
+      </tr>
+        <% end %>
+  </table>
