@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Vacation Budget Tracker</title>
+  </head>
+
+  <style>
+    body {
+      background-color: #A8B910;
+    }
+    
+    .container{
+      text-align: center;
+    }
+  </style>
+
+  <body>
+
+  <form action="/logout" method="GET">
+    <input type="submit" value="logout" />
+  </form>
+
+    <div class="container">
+      <h1>Vacation Budget Tracker</h1>
+      <img src="https://freepngimg.com/thumb/vacation/6-2-vacation-free-download-png.png" height="200px" width="200px">
+    </div>
+
+    <%= yield %>
+
+  </body>
+</html>
