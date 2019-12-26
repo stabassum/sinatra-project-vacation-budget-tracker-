@@ -39,9 +39,17 @@ class VacationsController < ApplicationController
     end
 
     get '/vacations/:id/edit' do 
+      # if (session[:user_id]) == vacation.user_id, vacation.id) 
+      
         @vacation = Vacation.find_by_id(params[:id])
-        erb :"/vacations/edit"
-    end 
+        
+       # if Helpers.is_logged_in?(session) && Vacation.find_by_id(params[:id]).user_id == session[:user_id] - alternate way to write below code
+       if Helpers.is_logged_in?(session) && @vacation.user_id == session[:user_id]   
+          erb :"/vacations/edit"
+        else
+          redirect to '/login' 
+        end
+    end  
 
     patch '/vacations/:id' do
     
